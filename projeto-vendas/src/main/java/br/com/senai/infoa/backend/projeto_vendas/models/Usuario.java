@@ -1,5 +1,6 @@
 package br.com.senai.infoa.backend.projeto_vendas.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -13,8 +14,11 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column (name = "nome")
     private String nome;
+    @Column (name = "email")
     private String email;
+    @Column (name = "senha")
     private String senha;
 
     public Usuario() {
